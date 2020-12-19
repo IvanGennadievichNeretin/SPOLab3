@@ -147,13 +147,13 @@ namespace SPOLab2
             }
             if (Language.isItLegalIdentifier(a))
             {
-                newLexeme = new Lexeme(a, "Идентификатор", a);
+                newLexeme = new Lexeme(a, "Идентификатор", "a");
                 generatedLexemes.Add(newLexeme);
                 return;
             }
             if (Language.isItLegalNumber(a))
             {
-                newLexeme = new Lexeme(a, "Число", a);
+                newLexeme = new Lexeme(a, "Число", "a");
                 generatedLexemes.Add(newLexeme);
                 return;
             }

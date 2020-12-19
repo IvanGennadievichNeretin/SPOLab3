@@ -112,6 +112,16 @@ namespace SPOLab1
             {
                 dataGridView2.Rows.Add(syntaxAnalyser.errorInfos[k].stringNumber, syntaxAnalyser.errorInfos[k].info);
             }
+            syntaxTreeLabel.Text = "";
+            for (int i = 0; i < syntaxAnalyser.lexemeTrees.Count; i++)
+            {
+                List<string> linesGotten = syntaxAnalyser.lexemeTrees[i].toLines();
+                for (int j = 0; j < linesGotten.Count; j++)
+                {
+                    syntaxTreeLabel.Text += linesGotten[j] + Environment.NewLine;
+                }             
+            }
+            
         }
 
         private void button3_Click(object sender, EventArgs e)

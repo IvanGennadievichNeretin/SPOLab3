@@ -14,7 +14,9 @@ namespace SPOLab3
         RuleTable ruleTable;
         public List<ErrorInfo> errorInfos;
         public List<string> ruleSequense;
+        public List<string> stackHistory;
         int currentRow;
+        public List<LexemeTree> lexemeTrees;
 
         public SyntaxAnalyser()
         {
@@ -24,6 +26,8 @@ namespace SPOLab3
             precedenceTable = table.getTable();
             errorInfos = new List<ErrorInfo>();
             ruleSequense = new List<string>();
+            stackHistory = new List<string>();
+            lexemeTrees = new List<LexemeTree>();           
         }
 
         public void analyse(List<Lexeme> listOfLexemes)
@@ -38,13 +42,15 @@ namespace SPOLab3
                 currentRow = listOfLexemes[i].stringNumber;
                 while (i < listOfLexemes.Count)
                 {
-                    currentList.Add(listOfLexemes[i].name);
-                    if (Language.isItTerminal(listOfLexemes[i].name)) break;
+                    currentList.Add(listOfLexemes[i].value);
+                    if (Language.isItTerminal(listOfLexemes[i].value)) break;
                     i++;
                 }
                 if (analyseThisString(currentList))
                 {
                     reportError("very", "good");
+                    TreeConstructor constructor = new TreeConstructor();
+                    lexemeTrees.Add(constructor.CreateTree(ruleSequense));
                 }
                 currentList.Clear();
                 i++;
@@ -301,7 +307,14 @@ namespace SPOLab3
             else
             {
                 stack.Push(symbolGotten);
-                ruleSequense.Add(symbolGotten + numberOfRuleGotten);
+                ruleSequense.Add(numberOfRuleGotten);
+                Stack<string> buferStack = copyStack(stack);
+                string containedInStack = "";
+                while (buferStack.Count > 0)
+                {
+                    containedInStack += buferStack.Pop() + " ";
+                }
+                stackHistory.Add(containedInStack);
                 return true;
             }
             
