@@ -1,0 +1,18 @@
+D:\Иван\Desktop\Учеба\7 семестр\СПО\Лабы\2\Lab2 программа 2\Программа\SPOLab1\bin\Debug\SPOLab2.exe.config
+D:\Иван\Desktop\Учеба\7 семестр\СПО\Лабы\2\Lab2 программа 2\Программа\SPOLab1\bin\Debug\SPOLab2.exe
+D:\Иван\Desktop\Учеба\7 семестр\СПО\Лабы\2\Lab2 программа 2\Программа\SPOLab1\bin\Debug\SPOLab2.pdb
+D:\Иван\Desktop\Учеба\7 семестр\СПО\Лабы\2\Lab2 программа 2\Программа\SPOLab1\obj\Debug\SPOLab2.csprojAssemblyReference.cache
+D:\Иван\Desktop\Учеба\7 семестр\СПО\Лабы\2\Lab2 программа 2\Программа\SPOLab1\obj\Debug\SPOLab1.Form1.resources
+D:\Иван\Desktop\Учеба\7 семестр\СПО\Лабы\2\Lab2 программа 2\Программа\SPOLab1\obj\Debug\SPOLab2.Properties.Resources.resources
+D:\Иван\Desktop\Учеба\7 семестр\СПО\Лабы\2\Lab2 программа 2\Программа\SPOLab1\obj\Debug\SPOLab2.csproj.GenerateResource.cache
+D:\Иван\Desktop\Учеба\7 семестр\СПО\Лабы\2\Lab2 программа 2\Программа\SPOLab1\obj\Debug\SPOLab2.exe
+D:\Иван\Desktop\Учеба\7 семестр\СПО\Лабы\2\Lab2 программа 2\Программа\SPOLab1\obj\Debug\SPOLab2.pdb
+D:\Иван\Desktop\Учеба\7 семестр\СПО\Лабы\3\Программа\SPOLab1\bin\Debug\SPOLab3.exe.config
+D:\Иван\Desktop\Учеба\7 семестр\СПО\Лабы\3\Программа\SPOLab1\bin\Debug\SPOLab3.exe
+D:\Иван\Desktop\Учеба\7 семестр\СПО\Лабы\3\Программа\SPOLab1\bin\Debug\SPOLab3.pdb
+D:\Иван\Desktop\Учеба\7 семестр\СПО\Лабы\3\Программа\SPOLab1\obj\Debug\SPOLab2.csprojAssemblyReference.cache
+D:\Иван\Desktop\Учеба\7 семестр\СПО\Лабы\3\Программа\SPOLab1\obj\Debug\SPOLab1.Form1.resources
+D:\Иван\Desktop\Учеба\7 семестр\СПО\Лабы\3\Программа\SPOLab1\obj\Debug\SPOLab3.Properties.Resources.resources
+D:\Иван\Desktop\Учеба\7 семестр\СПО\Лабы\3\Программа\SPOLab1\obj\Debug\SPOLab2.csproj.GenerateResource.cache
+D:\Иван\Desktop\Учеба\7 семестр\СПО\Лабы\3\Программа\SPOLab1\obj\Debug\SPOLab3.exe
+D:\Иван\Desktop\Учеба\7 семестр\СПО\Лабы\3\Программа\SPOLab1\obj\Debug\SPOLab3.pdb
