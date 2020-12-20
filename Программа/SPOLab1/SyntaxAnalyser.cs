@@ -48,7 +48,7 @@ namespace SPOLab3
                 }
                 if (analyseThisString(currentList))
                 {
-                    reportError("very", "good");
+                    //reportError("very", "good");
                     TreeConstructor constructor = new TreeConstructor();
                     lexemeTrees.Add(constructor.CreateTree(ruleSequense));
                 }
@@ -79,7 +79,7 @@ namespace SPOLab3
                 {
                     if (PrecedenceTableCol.TryGetValue(anotherLexeme, out stateGotten) == false)
                     {
-                        reportError(anotherLexeme, terminalFoundInStack);
+                        reportError("Синтаксическая ошибка: '" + anotherLexeme + "' найдено в ненадлежащем месте. Символ в стэке: ", terminalFoundInStack);
                         return false;
                     }
                     else
@@ -94,9 +94,15 @@ namespace SPOLab3
                         {
                             //свертка
                             //перемещение каретки не производится
-                            if (!convoluteLexemesIntoRule(getRelatedLexemesFromStack()))
-                            {                               
-                                reportError("convolute: ", " error");                                                              
+                            List<string> chainGotten = getRelatedLexemesFromStack();
+                            if (!convoluteLexemesIntoRule(chainGotten))
+                            {
+                                string chain = "";
+                                for (int k = 0; k < chainGotten.Count; k++)
+                                {
+                                    chain += chainGotten[k] + " ";
+                                }
+                                reportError("Синтаксическая ошибка при формировании конструкции: '" + chain + "'", "");                                                              
                             }
                         }
                     }
@@ -133,7 +139,7 @@ namespace SPOLab3
 
         private void reportError(string wordFound, string terminalFoundInStack)
         {
-            errorInfos.Add(new ErrorInfo(currentRow, wordFound + " but " + terminalFoundInStack));
+            errorInfos.Add(new ErrorInfo(currentRow, wordFound + terminalFoundInStack));
         }
 
         private List<string> getRelatedLexemesFromStack()

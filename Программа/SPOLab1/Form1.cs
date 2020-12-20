@@ -105,6 +105,34 @@ namespace SPOLab1
                 dataGridView2.Rows.Add(lexicalAnalyser.errorInfos[j].stringNumber, lexicalAnalyser.errorInfos[j].info);
             }
 
+            //создание таблицы идентификаторов
+            binaryTree identifierTable = new binaryTree(lexemes.Count);
+            int operations = 0;
+            Dictionary<string, int> idCounts = new Dictionary<string, int>();
+            List<SPOLab2.Lexeme> identifiers = new List<SPOLab2.Lexeme>();
+            for (int i = 0; i < lexemes.Count; i++)
+            {
+                if (!identifierTable.isItExist(lexemes[i].name, ref operations))
+                {
+                    identifierTable.put(lexemes[i].name, ref operations);
+                    identifiers.Add(lexemes[i]);
+                    idCounts.Add(lexemes[i].name, 1);                   
+                }
+                else
+                {
+                    int countGotten;
+                    if(idCounts.TryGetValue(lexemes[i].name, out countGotten))
+                    {
+                        idCounts[lexemes[i].name]++;                       
+                    }
+                }
+            }
+            dataGridView3.Rows.Clear();
+            for (int i = 0; i < identifiers.Count; i++)
+            {
+                dataGridView3.Rows.Add(identifiers[i].name, identifiers[i].stringNumber, idCounts[identifiers[i].name]);
+            }
+
             //синтаксический анализатор
             SPOLab3.SyntaxAnalyser syntaxAnalyser = new SPOLab3.SyntaxAnalyser();
             syntaxAnalyser.analyse(lexemes);

@@ -47,11 +47,18 @@
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.syntaxTreeLabel = new System.Windows.Forms.Label();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.dataGridView3 = new System.Windows.Forms.DataGridView();
+            this.identifier = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.firstAppear = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.count = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
+            this.tabPage3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
@@ -169,6 +176,7 @@
             // 
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Controls.Add(this.tabPage3);
             this.tabControl1.Location = new System.Drawing.Point(426, 87);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
@@ -183,7 +191,7 @@
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage1.Size = new System.Drawing.Size(435, 316);
             this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "tabPage1";
+            this.tabPage1.Text = "Таблица лексем";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
             // tabPage2
@@ -194,7 +202,7 @@
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage2.Size = new System.Drawing.Size(435, 316);
             this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "tabPage2";
+            this.tabPage2.Text = "Синтаксическое дерево";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // syntaxTreeLabel
@@ -205,6 +213,44 @@
             this.syntaxTreeLabel.Size = new System.Drawing.Size(181, 13);
             this.syntaxTreeLabel.TabIndex = 0;
             this.syntaxTreeLabel.Text = "Дерево синтаксического разбора";
+            // 
+            // tabPage3
+            // 
+            this.tabPage3.Controls.Add(this.dataGridView3);
+            this.tabPage3.Location = new System.Drawing.Point(4, 22);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage3.Size = new System.Drawing.Size(435, 316);
+            this.tabPage3.TabIndex = 2;
+            this.tabPage3.Text = "Таблица идентификаторов";
+            this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // dataGridView3
+            // 
+            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView3.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.identifier,
+            this.firstAppear,
+            this.count});
+            this.dataGridView3.Location = new System.Drawing.Point(6, 6);
+            this.dataGridView3.Name = "dataGridView3";
+            this.dataGridView3.Size = new System.Drawing.Size(423, 304);
+            this.dataGridView3.TabIndex = 0;
+            // 
+            // identifier
+            // 
+            this.identifier.HeaderText = "Идентификатор";
+            this.identifier.Name = "identifier";
+            // 
+            // firstAppear
+            // 
+            this.firstAppear.HeaderText = "Первое появление на строке";
+            this.firstAppear.Name = "firstAppear";
+            // 
+            // count
+            // 
+            this.count.HeaderText = "Количество в программе";
+            this.count.Name = "count";
             // 
             // Form1
             // 
@@ -226,6 +272,8 @@
             this.tabPage1.ResumeLayout(false);
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
+            this.tabPage3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -251,6 +299,11 @@
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.Label syntaxTreeLabel;
+        private System.Windows.Forms.TabPage tabPage3;
+        private System.Windows.Forms.DataGridView dataGridView3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn identifier;
+        private System.Windows.Forms.DataGridViewTextBoxColumn firstAppear;
+        private System.Windows.Forms.DataGridViewTextBoxColumn count;
     }
 }
 
